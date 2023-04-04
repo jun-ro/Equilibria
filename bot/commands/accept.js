@@ -27,7 +27,7 @@ module.exports = {
     const cat = await randomCat();
     const catPfp = cat.data.message;
     try {
-      await fetch(`http://localhost:3000/acceptForum`, {
+      await fetch(`https://odd-blue-mackerel-coat.cyclic.app/acceptForum`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
