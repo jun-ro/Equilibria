@@ -11,7 +11,7 @@ const bot_dir = path.join(__dirname, "bot");
 const { MessageListener, CommandHandlers } = require("./bot/stardust/index.js");
 const { clientId } = require("./config.json");
 
-const baseURL = "http://localhost:3000";
+const baseURL = "https://odd-blue-mackerel-coat.cyclic.app";
 const {
   Client,
   GatewayIntentBits,
