@@ -1,0 +1,288 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Mono&family=Roboto:wght@700&display=swap");
+
+body {
+  background-color: #f1e8e6;
+  margin: 0;
+  padding: 0;
+}
+
+.introduction {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  transform: translateY(-4vh);
+}
+
+.introduction > h1 {
+  font-family: "Roboto", monospace;
+  font-size: 7.5vh;
+  padding: 0px;
+  opacity: 1;
+  animation: fade-in-title 1s;
+}
+
+@keyframes fade-in-title {
+  0% {
+    opacity: 0;
+    transform: translateY(5vh);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0vh);
+  }
+}
+
+.introduction > h4 {
+  font-family: "Roboto", monospace;
+  font-size: 2.5vh;
+  opacity: 0;
+  transform: translateY(-2.5vh);
+}
+
+@keyframes fade-in-footer {
+  0% {
+    opacity: 0;
+    transform: translateY(1vh);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(-2.5vh);
+  }
+}
+
+.create-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  transform: translateY(2.5vh);
+  height: 50vh;
+  width: 100%; /* set the width to 100% to make sure it covers the entire viewport */
+  opacity: 0;
+}
+
+@keyframes fade-in-form {
+  0% {
+    opacity: 0;
+    transform: translateY(10vh);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(2.5vh);
+  }
+}
+
+.create-block {
+  width: 75%;
+  height: 125%;
+  background-color: #edd2cb;
+  border-radius: 15px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#title-card {
+  margin-top: 30px;
+  margin-bottom: 10px;
+  color: tomato;
+  font-size: 5vh;
+  font-family: "Roboto", monospace;
+}
+
+#text-card {
+  color: tomato;
+  font-size: 5vh;
+  font-family: "Roboto", monospace;
+}
+
+#text {
+  margin-bottom: 20px;
+  width: 90%;
+  height: 150px;
+  outline: none;
+  background-color: #f1e8e6;
+  border: none;
+  border-radius: 15px;
+  text-align: left;
+  font-size: 25px;
+  font-family: "Roboto", monospace;
+  padding: 10px 20px;
+  resize: vertical; /* allow the user to resize the text input box vertically */
+}
+
+#title-input {
+  margin-top: 10px;
+  width: 90%;
+  height: 50px;
+  outline: none;
+  background-color: #f1e8e6;
+  border: none;
+  border-radius: 15px;
+  text-align: left;
+  font-size: 25px;
+  font-family: "Roboto", monospace;
+  padding: 10px 20px;
+}
+
+.submit-container {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  transform: translateY(1.5vw);
+  opacity: 0;
+}
+
+@keyframes fade-in-button {
+  0% {
+    opacity: 0;
+    transform: translateY(5vw);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(1.5vw);
+  }
+}
+
+.submit-container > button {
+  border-radius: 15px;
+  background-color: #f55951;
+  color: white;
+  outline: none;
+  border-color: none;
+  border: none;
+  width: 100px;
+  height: 50px;
+  cursor: pointer;
+  font-family: "Roboto", monospace;
+  font-size: 25px;
+}
+
+.popup-container {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  transform: translateY(100vw);
+  animation: slide 1s;
+  transition: 0.3s;
+}
+
+.popup-container.active {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  transform: translateY(-30vw);
+  animation: slide 1s;
+  transition: 0.3s;
+}
+
+.popup {
+  margin: 0 auto;
+  width: 750px;
+  height: 500px;
+  background-color: #f1e8e6;
+  border-radius: 15px;
+  z-index: 1;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+#notice {
+  color: black;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: "Roboto", monospace;
+  transform: translateY(7vw);
+  font-size: 50px;
+}
+ul {
+  list-style-type: none;
+  margin-left: 5px;
+  padding: 0;
+  overflow: hidden;
+  background-color: transparent;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: tomato;
+  font-family: "Roboto", monospace;
+  font-size: 25px;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+li a:hover {
+  background-color: tomato;
+  color: white;
+}
+
+@media only screen and (max-device-width: 1366px) and (max-device-height: 768px) {
+  .submit-container {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transform: translateY(-0.5vw);
+    opacity: 0;
+  }
+  .submit-container > button {
+    border-radius: 15px;
+    background-color: #f55951;
+    color: white;
+    outline: none;
+    border-color: none;
+    border: none;
+    width: 100px;
+    height: 50px;
+    cursor: pointer;
+    font-family: "Roboto", monospace;
+    font-size: 25px;
+  }
+
+  @keyframes fade-in-button {
+    0% {
+      opacity: 0;
+      transform: translateY(5vw);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(-0.5vw);
+    }
+  }
+  
+
+  .popup-container {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transform: translateY(100vw);
+    animation: slide 1s;
+    transition: 0.3s;
+  }
+
+  .popup-container.active {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transform: translateY(-25vw);
+    animation: slide 1s;
+    transition: 0.3s;
+  }
+
+  .popup {
+    margin: 0 auto;
+    width: 750px;
+    height: 400px;
+    background-color: #f1e8e6;
+    border-radius: 15px;
+    z-index: 1;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+  }
+}
